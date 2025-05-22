@@ -1,1 +1,5 @@
 # ProteinID-List-and-E-values-of-LIME1-Proteins-From-NCBI
+
+The result is a printout of the protein ID list of RefSeq human LIME1 proteins from NCBI and what each E-value is corresponding to each protein ID number that is at most 1e-5.  It is the resut from running the NCBI_Search.py program.
+
+I imported the necessary components using os.path, Bio, and Bio.Blast: Entrez, SeqIO, NCBIWWW, and NCBIXML.  Then I needed to provide an email.  I saved the query search to a variable.  I conducted the esearch using the query and saved the read result to a variable.  I created an ID List to store all of the ID's that would meet the requirements of my search.  I Blasted those results against the high quality RefSeq mouse protein alignments and saved those read results into a variable as well.  I then saved those read results and wrote them into a file I could refer back to later so if I needed to modify my program, the next search would not take as long.  I then filtered these results so that I would only print out the ID's and descriptions of those whose E-value met my requirement of at most 1e-5.
